@@ -20,7 +20,7 @@ GPKG = Path("/workspace/sbb/geo/schienennetz_2056_de.gpkg")
 INCIDENTS = Path("/workspace/sbb/history/incidents.json")
 INCIDENT_TEXT = Path("/workspace/sbb/out/incidents.json")
 
-UA = "railsight/0.1 (LauzHack 2026 research prototype; contact via github.com/lauzhack2026)"
+UA = "railsight/0.1 (LauzHack 2026 research prototype; contact via github.com/LauzTakt)"
 WMTS = "https://wmts.geo.admin.ch/1.0.0/{layer}/default/current/3857/{z}/{x}/{y}.{ext}"
 
 # layer -> (file extension, zoom used, corridor half-width in metres)

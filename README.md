@@ -75,7 +75,7 @@ what it cost.
 
 | Source | Licence / attribution | Feeds |
 |---|---|---|
-| Federal rail network (Schienennetz), BAV, as prepared by our [sbb-twin](https://github.com/lauzhack2026/sbb-twin) | open government data, © BAV | track geometry, segments, sections between stations |
+| Federal rail network (Schienennetz), BAV, as prepared by our [sbb-twin](https://github.com/LauzTakt/sbb-twin) | open government data, © BAV | track geometry, segments, sections between stations |
 | SWISSIMAGE orthophotos | © swisstopo (geo.admin.ch, free use with attribution) | step 3 crops, the app's aerial view |
 | Slope classes over 30° | © swisstopo | step 1: steep ground |
 | Vegetation height model, Swiss National Forest Inventory (LFI) | © BAFU / WSL | step 1: tree heights near the track |
