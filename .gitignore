@@ -1,0 +1,9 @@
+# raw tiles, model logs and intermediate files stay local (cache/); the app's data in app/public is committed
+.venv/
+cache/
+node_modules/
+app/dist/
+__pycache__/
+*.log
+*.tmp
+.env

@@ -1,0 +1,8 @@
+.git
+.venv
+cache
+pipeline
+docs
+app/node_modules
+app/dist
+*.log
