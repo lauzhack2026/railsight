@@ -112,8 +112,10 @@ def main():
     pos = {i: r / len(ranked) for r, i in enumerate(ranked)}
     rankedT = sorted(universe, key=lambda i: -T[i]["risk"])
     posT = {i: r / len(rankedT) for r, i in enumerate(rankedT)}
+    W10 = topk_weights({i: A[i]["risk"] for i in universe}, 0.10)
     listing = lambda incs, p: [{"id": str(n), "date": o["start"][:10], "section": o["section"], "cls": o["cls"],
-                                "best_pct": round(min(p[s] for s in o["open"]), 3)} for n, o in enumerate(incs)]
+                                "best_pct": round(min(p[s] for s in o["open"]), 3),
+                                "frac_top": round(float(np.mean([W10[s] for s in o["open"]])), 3)} for n, o in enumerate(incs)]
     out = {"k": 0.10, "ks": KS, "universe": len(universe),
            "all_n": len(allyrs), "all_rows": all_rows, "all_table": all_tab, "all_list": listing(allyrs, posT),
            "test_n": len(test), "test_years": "2026 (Jan-Oct)", "rows": test_rows, "test_table": test_tab,

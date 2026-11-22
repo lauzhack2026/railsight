@@ -19,7 +19,9 @@ LOG = WORK / "calls.jsonl"
 
 
 def load_env():
-    p = Path.home() / ".config/lauzhack/.env"
+    p = Path.home() / ".config/lauzhack/.env"   # local convenience; otherwise ANTHROPIC_API_KEY from the environment
+    if os.environ.get("ANTHROPIC_API_KEY") or not p.exists():
+        return
     for line in p.read_text().splitlines():
         if line.startswith("ANTHROPIC_API_KEY="):
             os.environ["ANTHROPIC_API_KEY"] = line.split("=", 1)[1].strip().strip('"')

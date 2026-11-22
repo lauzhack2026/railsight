@@ -115,7 +115,8 @@ def main(masks=True):
     seg_per_100km = 100 / (np.mean([s["len"] for s in segs]) / 1000)
     naive_per_seg = float(np.mean([c["usd"] for c in N])) if N else 0.0
     open_frac = open_km / km
-    fetch = json.load(open(WORK / "fetch_stats.json")) if (WORK / "fetch_stats.json").exists() else {"tiles": 0, "bytes": 0, "seconds": 0}
+    fs = [WORK / "fetch_stats_repair.json", WORK / "fetch_stats.json"]
+    fetch = next((json.load(open(p)) for p in fs if p.exists()), {"tiles": 0, "bytes": 0, "seconds": 0})
     fstats = json.load(open(WORK / "features_stats.json")) if (WORK / "features_stats.json").exists() else {"ms_per_segment": 0}
     ev = json.load(open(WORK / "eval.json")) if (WORK / "eval.json").exists() else {"k": 0.1, "test_n": 0, "test_years": "2026", "rows": [], "all_n": 0, "all_rows": [], "tests": []}
     ev["note"] = NOTE
@@ -141,10 +142,10 @@ def main(masks=True):
     print(json.dumps({k: v for k, v in summary.items() if k not in ("top", "eval")}, indent=1), "masks", n_mask)
 
 
-NOTE = ("Natural-hazard incidents are rare: the test set is a handful of events, so the interval is wide and one incident more "
-        "or less moves the share by many points. Incidents are only known per station-to-station section, not to the metre, "
-        "so each one is spread evenly over its section. The liveticker covers disruptions SBB announced to passengers, not "
-        "every tree that fell. Read the result as a first signal, not a validated model.")
+NOTE = ("Natural-hazard incidents are rare: a few dozen in 31 months, so the intervals are wide and one incident more or "
+        "less moves a share by several points. Incidents are only known per station-to-station section, not to the metre, "
+        "and the liveticker lists the disruptions SBB announced to passengers, not every tree that fell. Railsight ranks "
+        "exposure to screen the network cheaply and say where to look first; it is not a validated predictor.")
 
 if __name__ == "__main__":
     main()

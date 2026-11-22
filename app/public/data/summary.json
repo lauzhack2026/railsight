@@ -1,0 +1,651 @@
+{
+ "scan": {
+  "segments": 4243,
+  "km": 4067.7,
+  "open_km": 3453.9,
+  "tunnel_km": 613.8,
+  "tiles": 27895,
+  "mb": 455.4,
+  "ms_per_segment": 130,
+  "minutes_fetch": 0.1
+ },
+ "cascade": {
+  "tunnel": 507,
+  "quiet": 1103,
+  "text": 2633,
+  "vision": 210,
+  "text_calls": 88,
+  "vision_calls": 210,
+  "km_text": 0,
+  "km_vision": 0
+ },
+ "cost": {
+  "model": "Claude Haiku 5.5",
+  "naive_model": "Claude Opus 5.5",
+  "text_in": 187591,
+  "text_out": 155089,
+  "vision_in": 139894,
+  "vision_out": 11811,
+  "usd_text": 0.0963,
+  "usd_vision": 0.0199,
+  "usd_total": 0.1162,
+  "usd_per_100km": 0.00286,
+  "naive_usd_per_100km": 0.5746,
+  "naive_sample": 12,
+  "ratio": 201.1,
+  "text_s": 6.85,
+  "vision_s": 1.2,
+  "naive_s": 2.17
+ },
+ "eval": {
+  "k": 0.1,
+  "ks": [
+   0.05,
+   0.1,
+   0.2
+  ],
+  "universe": 3736,
+  "all_n": 32,
+  "all_rows": [
+   {
+    "name": "Railsight",
+    "note": "terrain only, no history",
+    "share": 0.104,
+    "lo": 0.052,
+    "hi": 0.166
+   },
+   {
+    "name": "Rule, no model",
+    "note": "weighted step-1 numbers",
+    "share": 0.106,
+    "lo": 0.056,
+    "hi": 0.161
+   },
+   {
+    "name": "Traffic",
+    "note": "trains per day",
+    "share": 0.087,
+    "lo": 0.019,
+    "hi": 0.171
+   },
+   {
+    "name": "Section length",
+    "note": "length of the section between stations",
+    "share": 0.137,
+    "lo": 0.053,
+    "hi": 0.232
+   },
+   {
+    "name": "Random",
+    "note": "expected: k",
+    "share": 0.101,
+    "lo": 0.059,
+    "hi": 0.147
+   }
+  ],
+  "all_table": {
+   "Railsight": {
+    "5": [
+     0.053,
+     0.027,
+     0.083
+    ],
+    "10": [
+     0.104,
+     0.052,
+     0.166
+    ],
+    "20": [
+     0.227,
+     0.157,
+     0.302
+    ]
+   },
+   "Rule, no model": {
+    "5": [
+     0.05,
+     0.018,
+     0.092
+    ],
+    "10": [
+     0.106,
+     0.056,
+     0.161
+    ],
+    "20": [
+     0.216,
+     0.139,
+     0.302
+    ]
+   },
+   "Traffic": {
+    "5": [
+     0.013,
+     0.003,
+     0.027
+    ],
+    "10": [
+     0.087,
+     0.019,
+     0.171
+    ],
+    "20": [
+     0.129,
+     0.046,
+     0.229
+    ]
+   },
+   "Section length": {
+    "5": [
+     0.05,
+     0.004,
+     0.116
+    ],
+    "10": [
+     0.137,
+     0.053,
+     0.232
+    ],
+    "20": [
+     0.143,
+     0.061,
+     0.239
+    ]
+   },
+   "Random": {
+    "5": [
+     0.052,
+     0.022,
+     0.088
+    ],
+    "10": [
+     0.101,
+     0.059,
+     0.147
+    ],
+    "20": [
+     0.214,
+     0.166,
+     0.264
+    ]
+   }
+  },
+  "all_list": [
+   {
+    "id": "0",
+    "date": "2024-03-23",
+    "section": "St-Imier - La Chaux-de-Fonds",
+    "cls": "tree",
+    "best_pct": 0.041,
+    "frac_top": 0.167
+   },
+   {
+    "id": "1",
+    "date": "2024-03-23",
+    "section": "Olten - Solothurn",
+    "cls": "tree",
+    "best_pct": 0.12,
+    "frac_top": 0.061
+   },
+   {
+    "id": "2",
+    "date": "2024-03-28",
+    "section": "Yvonand - Yverdon-les-Bains",
+    "cls": "slope",
+    "best_pct": 0.168,
+    "frac_top": 0.111
+   },
+   {
+    "id": "3",
+    "date": "2024-05-19",
+    "section": "St. Gallen St. Fiden - Goldach",
+    "cls": "slope",
+    "best_pct": 0.08,
+    "frac_top": 0.4
+   },
+   {
+    "id": "4",
+    "date": "2024-05-30",
+    "section": "Ependes VD - Chavornay",
+    "cls": "tree",
+    "best_pct": 0.396,
+    "frac_top": 0.2
+   },
+   {
+    "id": "5",
+    "date": "2024-05-31",
+    "section": "Yverdon-les-Bains - Lausanne and Morges",
+    "cls": "tree",
+    "best_pct": 0.159,
+    "frac_top": 0.047
+   },
+   {
+    "id": "6",
+    "date": "2024-06-21",
+    "section": "Le Day - Le Brassus",
+    "cls": "tree",
+    "best_pct": 0.003,
+    "frac_top": 0.391
+   },
+   {
+    "id": "7",
+    "date": "2024-06-21",
+    "section": "Riddes - Ardon",
+    "cls": "tree",
+    "best_pct": 0.543,
+    "frac_top": 0.0
+   },
+   {
+    "id": "8",
+    "date": "2024-06-30",
+    "section": "Sion - Sierre/Siders",
+    "cls": "water",
+    "best_pct": 0.543,
+    "frac_top": 0.0
+   },
+   {
+    "id": "9",
+    "date": "2024-06-30",
+    "section": "Leuk - Gampel-Steg",
+    "cls": "water",
+    "best_pct": 0.113,
+    "frac_top": 0.75
+   },
+   {
+    "id": "10",
+    "date": "2024-07-17",
+    "section": "Lausanne - Cully",
+    "cls": "tree",
+    "best_pct": 0.243,
+    "frac_top": 0.233
+   },
+   {
+    "id": "11",
+    "date": "2024-08-01",
+    "section": "La Chaux-de-Fonds - St-Imier",
+    "cls": "tree",
+    "best_pct": 0.041,
+    "frac_top": 0.25
+   },
+   {
+    "id": "12",
+    "date": "2024-09-26",
+    "section": "Le Day - Le Brassus",
+    "cls": "tree",
+    "best_pct": 0.003,
+    "frac_top": 0.391
+   },
+   {
+    "id": "13",
+    "date": "2024-09-26",
+    "section": "St-Maurice - Monthey",
+    "cls": "water",
+    "best_pct": 0.143,
+    "frac_top": 0.143
+   },
+   {
+    "id": "14",
+    "date": "2024-09-27",
+    "section": "Massongex - Monthey",
+    "cls": "tree",
+    "best_pct": 0.347,
+    "frac_top": 0.0
+   },
+   {
+    "id": "15",
+    "date": "2024-10-09",
+    "section": "Le Lieu - Le Sentier-L'Orient",
+    "cls": "tree",
+    "best_pct": 0.115,
+    "frac_top": 0.6
+   },
+   {
+    "id": "16",
+    "date": "2024-12-22",
+    "section": "Solothurn - Oberdorf SO",
+    "cls": "tree",
+    "best_pct": 0.024,
+    "frac_top": 0.333
+   },
+   {
+    "id": "17",
+    "date": "2025-04-17",
+    "section": "Visp - Leuk",
+    "cls": "tree",
+    "best_pct": 0.113,
+    "frac_top": 0.592
+   },
+   {
+    "id": "18",
+    "date": "2025-06-21",
+    "section": "Spiez - Interlaken Ost",
+    "cls": "tree",
+    "best_pct": 0.012,
+    "frac_top": 0.19
+   },
+   {
+    "id": "19",
+    "date": "2025-06-27",
+    "section": "Delémont - Bassecourt",
+    "cls": "obstacle",
+    "best_pct": 0.183,
+    "frac_top": 0.0
+   },
+   {
+    "id": "20",
+    "date": "2025-07-15",
+    "section": "Malleray-Bévilard - Sonceboz-Sombeval",
+    "cls": "obstacle",
+    "best_pct": 0.034,
+    "frac_top": 0.523
+   },
+   {
+    "id": "21",
+    "date": "2025-09-26",
+    "section": "Sonceboz-Sombeval - Court",
+    "cls": "obstacle",
+    "best_pct": 0.034,
+    "frac_top": 0.245
+   },
+   {
+    "id": "22",
+    "date": "2025-10-04",
+    "section": "Solothurn - Oberdorf SO",
+    "cls": "tree",
+    "best_pct": 0.024,
+    "frac_top": 0.333
+   },
+   {
+    "id": "23",
+    "date": "2025-10-31",
+    "section": "Les Hauts-Geneveys - Les Geneveys-sur-Coffrane",
+    "cls": "obstacle",
+    "best_pct": 0.225,
+    "frac_top": 0.25
+   },
+   {
+    "id": "24",
+    "date": "2025-11-07",
+    "section": "Eclépens - Chavornay",
+    "cls": "water",
+    "best_pct": 0.279,
+    "frac_top": 0.0
+   },
+   {
+    "id": "25",
+    "date": "2025-11-18",
+    "section": "Cossonay-Penthalaz - Eclépens",
+    "cls": "obstacle",
+    "best_pct": 0.159,
+    "frac_top": 0.143
+   },
+   {
+    "id": "26",
+    "date": "2026-01-27",
+    "section": "La Chaux-de-Fonds - Les Hauts-Geneveys and Renan BE",
+    "cls": "obstacle",
+    "best_pct": 0.571,
+    "frac_top": 0.0
+   },
+   {
+    "id": "27",
+    "date": "2026-03-25",
+    "section": "Bevaix - Boudry",
+    "cls": "obstacle",
+    "best_pct": 0.112,
+    "frac_top": 0.0
+   },
+   {
+    "id": "28",
+    "date": "2026-06-08",
+    "section": "Vevey - Puidoux",
+    "cls": "obstacle",
+    "best_pct": 0.056,
+    "frac_top": 0.0
+   },
+   {
+    "id": "29",
+    "date": "2026-06-29",
+    "section": "La Chaux-de-Fonds Les Forges - Le Crêt-du-Locle",
+    "cls": "obstacle",
+    "best_pct": 0.98,
+    "frac_top": 0.0
+   },
+   {
+    "id": "30",
+    "date": "2026-07-01",
+    "section": "Monthey - Bouveret",
+    "cls": "tree",
+    "best_pct": 0.171,
+    "frac_top": 0.062
+   },
+   {
+    "id": "31",
+    "date": "2026-08-21",
+    "section": "Thörishaus Station - Schmitten FR",
+    "cls": "tree",
+    "best_pct": 0.031,
+    "frac_top": 0.3
+   }
+  ],
+  "test_n": 6,
+  "test_years": "2026 (Jan-Oct)",
+  "rows": [
+   {
+    "name": "Railsight",
+    "note": "full cascade",
+    "share": 0.06,
+    "lo": 0.0,
+    "hi": 0.16
+   },
+   {
+    "name": "Text step only",
+    "note": "no vision step",
+    "share": 0.11,
+    "lo": 0.01,
+    "hi": 0.235
+   },
+   {
+    "name": "Rule, no model",
+    "note": "weighted step-1 numbers",
+    "share": 0.083,
+    "lo": 0.019,
+    "hi": 0.151
+   },
+   {
+    "name": "Incident history",
+    "note": "2024-25 incidents on the section",
+    "share": 0.093,
+    "lo": 0.04,
+    "hi": 0.2
+   },
+   {
+    "name": "Traffic",
+    "note": "trains per day",
+    "share": 0.085,
+    "lo": 0.0,
+    "hi": 0.219
+   }
+  ],
+  "test_table": {
+   "Railsight": {
+    "5": [
+     0.036,
+     0.0,
+     0.103
+    ],
+    "10": [
+     0.06,
+     0.0,
+     0.16
+    ],
+    "20": [
+     0.121,
+     0.019,
+     0.265
+    ]
+   },
+   "Text step only": {
+    "5": [
+     0.05,
+     0.0,
+     0.113
+    ],
+    "10": [
+     0.11,
+     0.01,
+     0.235
+    ],
+    "20": [
+     0.176,
+     0.021,
+     0.376
+    ]
+   },
+   "Rule, no model": {
+    "5": [
+     0.017,
+     0.0,
+     0.05
+    ],
+    "10": [
+     0.083,
+     0.019,
+     0.151
+    ],
+    "20": [
+     0.21,
+     0.073,
+     0.379
+    ]
+   },
+   "Incident history": {
+    "5": [
+     0.056,
+     0.0,
+     0.167
+    ],
+    "10": [
+     0.093,
+     0.04,
+     0.2
+    ],
+    "20": [
+     0.194,
+     0.147,
+     0.289
+    ]
+   },
+   "Traffic": {
+    "5": [
+     0.019,
+     0.0,
+     0.056
+    ],
+    "10": [
+     0.085,
+     0.0,
+     0.219
+    ],
+    "20": [
+     0.085,
+     0.0,
+     0.219
+    ]
+   }
+  },
+  "tests": [
+   {
+    "id": "0",
+    "date": "2026-01-27",
+    "section": "La Chaux-de-Fonds - Les Hauts-Geneveys and Renan BE",
+    "cls": "obstacle",
+    "best_pct": 0.527,
+    "frac_top": 0.0
+   },
+   {
+    "id": "1",
+    "date": "2026-03-25",
+    "section": "Bevaix - Boudry",
+    "cls": "obstacle",
+    "best_pct": 0.285,
+    "frac_top": 0.0
+   },
+   {
+    "id": "2",
+    "date": "2026-06-08",
+    "section": "Vevey - Puidoux",
+    "cls": "obstacle",
+    "best_pct": 0.103,
+    "frac_top": 0.0
+   },
+   {
+    "id": "3",
+    "date": "2026-06-29",
+    "section": "La Chaux-de-Fonds Les Forges - Le Crêt-du-Locle",
+    "cls": "obstacle",
+    "best_pct": 0.982,
+    "frac_top": 0.0
+   },
+   {
+    "id": "4",
+    "date": "2026-07-01",
+    "section": "Monthey - Bouveret",
+    "cls": "tree",
+    "best_pct": 0.053,
+    "frac_top": 0.062
+   },
+   {
+    "id": "5",
+    "date": "2026-08-21",
+    "section": "Thörishaus Station - Schmitten FR",
+    "cls": "tree",
+    "best_pct": 0.024,
+    "frac_top": 0.3
+   }
+  ],
+  "note": "Natural-hazard incidents are rare: a few dozen in 31 months, so the intervals are wide and one incident more or less moves a share by several points. Incidents are only known per station-to-station section, not to the metre, and the liveticker lists the disruptions SBB announced to passengers, not every tree that fell. Railsight ranks exposure to screen the network cheaply and say where to look first; it is not a validated predictor."
+ },
+ "top": [
+  "ch14uvag00087473-2",
+  "ch14uvag00087867-2",
+  "ch14uvag00087863-1",
+  "ch14uvag00087472-1",
+  "ch14uvag00087234-0",
+  "ch14uvag00087504-0",
+  "ch14uvag00277876-4",
+  "ch14uvag00087473-1",
+  "ch14uvag00087474-0",
+  "ch14uvag00087849-2",
+  "ch14uvag00087224-2",
+  "ch14uvag00087467-0",
+  "ch14uvag00087248-3",
+  "ch14uvag00087248-4",
+  "ch14uvag00087187-1",
+  "ch14uvag00068536-0",
+  "ch14uvag00087864-1",
+  "ch14uvag00087186-2",
+  "ch14uvag00087186-4",
+  "ch14uvag00087458-0",
+  "ch14uvag00087795-1",
+  "ch14uvag00087872-1",
+  "ch14uvag00087254-3",
+  "ch14uvag00088057-4",
+  "ch14uvag00087468-1",
+  "ch14uvag00067970-0",
+  "ch14uvag00087880-2",
+  "ch14uvag00087879-2",
+  "ch14uvag00068537-0",
+  "ch14uvag00068537-3",
+  "ch14uvag00067782-2",
+  "ch14uvag00087472-0",
+  "ch14uvag00088402-2",
+  "ch14uvag00087502-0",
+  "ch14uvag00087904-1",
+  "ch14uvag00087219-3",
+  "ch14uvag00087849-1",
+  "ch14uvag00087255-0",
+  "ch14uvag00087255-5",
+  "ch14uvag00087468-0"
+ ]
+}

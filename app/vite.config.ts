@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: { exclude: ["maplibre-gl"] },
+  build: { chunkSizeWarningLimit: 1600 },
   server: { port: 5481, host: "127.0.0.1", strictPort: true, proxy: { "/api": "http://127.0.0.1:5482" } },
   preview: { port: 5481, host: "127.0.0.1", strictPort: true, proxy: { "/api": "http://127.0.0.1:5482" } },
 });
